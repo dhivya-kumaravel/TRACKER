@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income and Expense Tracker</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1 class="container">Income and Expense Calculator</h1>
+
+    <main>
+      <header>
+        <div>
+          <h5">Total Amount</h5>
+          <span id="balance">$0.00</span>
+        </div>
+        <div>
+          <h5>Income</h5>
+          <span id="income">$0.00</span>
+        </div>
+        <div>
+          <h5>Expense</h5>
+          <span id="expense">$0.00</span>
+        </div>
+      </header>
+      <div class="container1">
+        <input class="radio" type="radio" id="filter" name="filter" value="filter" checked />
+        <label for="huey">Expense</label>
+        <input class="radio" type="radio" id="filter" name="filter" value="filter" checked />
+        <label class="radio" for="huey">Income</label>
+        <input class="radio" type="radio" id="filter" name="filter" value="filter" checked />
+        <label for="huey">All</label>  
+      </div>
+
+      <section>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h3>Add Transaction</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Expense</span>
+                <span>Income</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Description :</label>
+            <input type="text" name="name" required placeholder="Type Here"/>
+          </div>
+          <div>
+            <label for="amount">Amount :</label>
+            <input
+              type="number"
+              name="amount"
+              value=" "
+              min="0.01"
+              step="0.01"
+              required placeholder="Enter here"
+            />
+          </div>
+          <div>
+            <label for="date">Date :</label>
+            <input type="date" name="date" />
+          </div>
+          <button type="submit">ADD</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
